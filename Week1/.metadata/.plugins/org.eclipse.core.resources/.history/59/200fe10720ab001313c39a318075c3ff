@@ -1,0 +1,10 @@
+package com.myenum.project2;
+
+public enum Users {
+	JOSH(),
+	GYASI(),
+	DESIRE(),
+	JANE(),
+	JOHN();
+
+}

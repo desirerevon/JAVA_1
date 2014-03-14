@@ -1,0 +1,46 @@
+package com.myenum.project2;
+
+public enum Users {
+	
+	//required int
+	
+	Josh("Josh", "Real Cool", "Basketball Player", 10),
+	Gyasi("Gyasi", "Really Cool", "College Instructor", 20),
+	Desire("Desire", "Extra Cool", "Mobile Developer", 25),
+	Jane("Jane", "Okay", "Song Artist", 30),
+	John("John", "Kinda Cool", "Garbage Man", 5);
+	   
+		
+
+	
+	
+	private final  String name;
+	private final  String status;
+	private final  String reason;
+	private final  int score;
+	
+	private Users(String name, String status, String reason, int score){
+	
+		this.name = name;
+		this.status = status;
+		this.reason = reason;
+		this.score = score;
+		
+	}
+	
+	public String setName(){
+		return name;
+	}
+	
+	public String setStatus(){
+		return status;
+	}
+	public String setReason(){
+		return reason;
+	}
+	public int setScore(){
+		return score;
+	}
+	
+	
+}

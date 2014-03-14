@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="main_text">Tell Me Your Name And I Will Tell You Youre Cool</string>
+    <string name="button_text">Tell Me</string>
+    <string name="dialog_fire_missiles">Choose from the following:</string>
+    <string name="fire">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_title">Josh, Gyasi or Desire</string>
+    <string name="data_text">test</string>
+
+</resources>

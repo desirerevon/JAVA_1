@@ -1,0 +1,5 @@
+package com.myenum.project2;
+
+public enum Users {
+
+}
