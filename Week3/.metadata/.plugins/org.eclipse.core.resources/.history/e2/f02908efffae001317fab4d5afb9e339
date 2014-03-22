@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string-array name="view_array">
+        
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+        <item>Option 4</item>
+        <item>Option 5</item>
+        <item>Option 6</item>
+        <item>Option 7</item>
+        <item>Option 8</item>
+        <item>Option 9</item>
+        <item>Option 10</item>
+                                        
+    </string-array>
+    <string name="header_text">Search Users in the Behance Directory</string>
+    <string name="info_text">Behance is a website that allows users to store their portfolios so that they can be contacted for work. Now you can search the users by name through this app!</string>
+    <string name="submit_text">Search</string>
+
+</resources>

@@ -1,0 +1,97 @@
+package com.desirerevon.project3;
+
+import java.util.ArrayList;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+		
+	Context mContext;
+	String[] dListItems;
+	//static String TAG = "NETWORK DATA" - "MAINACTIVITY";
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //Initialize Constants
+        mContext = this;
+        dListItems = getResources().getStringArray(R.array.view_array);
+        
+        //Title Text View
+        TextView headerText = new TextView(mContext);
+        headerText.setText(R.string.header_text);
+        headerText.setTextSize(30);
+        LayoutParams hView = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        headerText.setLayoutParams(hView);
+        
+        
+        //Title Second Text View
+        TextView infoText = new TextView(mContext);
+        infoText.setText(R.string.info_text);
+        infoText.setTextSize(20);
+        LayoutParams iView = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        infoText.setLayoutParams(iView);
+        
+        
+        //Create Linear Layout
+        LinearLayout layoutMain = new LinearLayout(mContext);
+        layoutMain.setOrientation(LinearLayout.VERTICAL);
+        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        layoutMain.setLayoutParams(lp);
+        
+        //Create Array Adapter
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item, dListItems);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    
+       //Create A Spinner : Call spinner class
+        Spinner viewSpinner = new Spinner(mContext);
+        viewSpinner.setAdapter(spinnerAdapter);
+        lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        viewSpinner.setLayoutParams(lp);
+        viewSpinner.setOnItemSelectedListener(new OnItemSelectedListener(){
+
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+        	
+        	
+        });
+        
+
+        
+        
+        //Add Layout Views : keep in order
+        setContentView(layoutMain);
+        layoutMain.addView(headerText);
+        layoutMain.addView(infoText);
+        layoutMain.addView(viewSpinner);
+
+}

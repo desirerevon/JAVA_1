@@ -1,0 +1,23 @@
+package com.networkconnection.project3;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+public class NETWORK {
+	
+	Context context;
+
+	 public static boolean connectionStatus(Context context) {
+		 boolean isConnected = false;
+		 ConnectivityManager connectMan = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+		 NetworkInfo netInfo = connectMan.getActiveNetworkInfo();
+		 if(netInfo != null){
+			 if(netInfo.isConnected()){
+				 isConnected = true;
+			 }
+		 }
+		 return isConnected;
+	 }
+
+}

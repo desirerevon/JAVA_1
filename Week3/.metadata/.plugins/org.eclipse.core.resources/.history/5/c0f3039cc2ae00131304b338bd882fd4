@@ -1,0 +1,65 @@
+package com.desirerevon.project3;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.view.Menu;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+		
+	Context mContext;
+	String[] dListItems;
+	
+	
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        //Initialize Constants
+        mContext = this;
+        dListItems = getResources().getStringArray(R.array.view_array);
+        
+        
+        //Create Linear Layout
+        
+        LinearLayout layoutMain = new LinearLayout(mContext);
+        layoutMain.setOrientation(LinearLayout.VERTICAL);
+        LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        layoutMain.setLayoutParams(lp);
+        
+        
+        //Create Spinner Adapter
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(mContext, android.R.layout.simple_spinner_item);
+        //call spinner adapter
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       
+        //Create A Spinner : Call spinner class
+        Spinner viewSpinner = new Spinner(mContext);
+        viewSpinner.setAdapter(spinnerAdapter);
+        //Pass to linear layout
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //Add Layout Views
+        setContentView(layoutMain);
+    }
+
+   
+    
+}
